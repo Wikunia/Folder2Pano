@@ -60,22 +60,26 @@ def remove_unreasonable_images(d,pano_files):
             kp2, des2 = kps[im2_no], dess[im2_no]
 
             bf = cv2.BFMatcher()
-            matches = bf.knnMatch(des1, des2, k=2)
+            if des1 is not None and des2 is not None:
+                matches = bf.knnMatch(des1, des2, k=2)
+                
+                try:
+                    smt = 0.3
+                    while smt <= 4:
+                        good = []
+                        for coins, n in matches:
+                            if coins.distance < smt * n.distance:
+                                if coins.queryIdx < len(kp1) and coins.queryIdx < len(kp2):
+                                    good.append(coins)
+                        if len(good) >= MIN_MATCH_COUNT:
+                            break
+                        else:
+                            smt += 0.1
 
-            smt = 0.3
-            while smt <= 4:
-                good = []
-                for coins, n in matches:
-                    if coins.distance < smt * n.distance:
-                        if coins.queryIdx < len(kp1) and coins.queryIdx < len(kp2):
-                            good.append(coins)
-                if len(good) >= MIN_MATCH_COUNT:
-                    break
-                else:
-                    smt += 0.1
-
-            good_images[im1_no] += len(good)
-            good_images[im2_no] += len(good)
+                    good_images[im1_no] += len(good)
+                    good_images[im2_no] += len(good)
+                except ValueError:
+                    pass
 
     # remove the cropped photos and the ones which aren't part of the pano        
     reasonable_files = 0        
@@ -139,3 +143,4 @@ for filename in files:
         last_tags = None
             
             
+
