@@ -1,0 +1,1 @@
+pto_gen -o $1.pto $1/* && cpfind -o $1.pto --multirow --celeste $1.pto && cpclean -o $1.pto $1.pto && linefind -o $1.pto $1.pto && autooptimiser -a -m -l -s -o $1.pto $1.pto && pano_modify --canvas=AUTO --crop=AUTO -o $1.pto $1.pto &&  hugin_executor --stitching --prefix=pano $1.pto && convert pano.tif $1.jpg && rm pano.tif
