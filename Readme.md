@@ -56,16 +56,8 @@ Of course it isn't always the case that you only shot panoramas if you have the 
 That's the reason why the python script itself uses `opencv` to check whether a panorama is reasonable before the hugin script is called.
 
 ## Example
-![p1070113](https://user-images.githubusercontent.com/4931746/28912302-0808d908-7834-11e7-99b1-4e0f8ec6b230.jpg)
-![p1070114](https://user-images.githubusercontent.com/4931746/28912303-080c5ad8-7834-11e7-8f17-eabb282d5db3.jpg)
-![p1070115](https://user-images.githubusercontent.com/4931746/28912304-0816380a-7834-11e7-9d03-714d018a68f7.jpg)
-![p1070116](https://user-images.githubusercontent.com/4931746/28912305-0816d846-7834-11e7-812e-4ed8604d14fe.jpg)
-![p1070117](https://user-images.githubusercontent.com/4931746/28912306-081af3ea-7834-11e7-815d-1bc477bbf57c.jpg)
-![p1070118](https://user-images.githubusercontent.com/4931746/28912307-081f5138-7834-11e7-8745-a72b4de59d9d.jpg)
-![p1070119](https://user-images.githubusercontent.com/4931746/28912308-08282308-7834-11e7-94ae-7cdc041eb991.jpg)
-![p1070120](https://user-images.githubusercontent.com/4931746/28912309-082d38b6-7834-11e7-8b39-d6bb23df7b23.jpg)
-![p1070121](https://user-images.githubusercontent.com/4931746/28912310-0834c162-7834-11e7-8b6b-6e9b50966962.jpg)
-![p1070122](https://user-images.githubusercontent.com/4931746/28912311-0837eca2-7834-11e7-9869-d34854eae238.jpg)
+![pano](https://user-images.githubusercontent.com/4931746/28912928-7c170610-7836-11e7-8939-e2c53d9f0459.png)
+
 
 Generates:
 ![p1070113-p1070122_small](https://user-images.githubusercontent.com/4931746/28912291-f7fd6006-7833-11e7-86b4-ceb0120c901b.jpg)
