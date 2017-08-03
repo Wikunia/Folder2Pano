@@ -45,12 +45,12 @@ Let's assume we have these photos:
 - 005.jpg - Manual    f8 1/50s 28mm 160 ISO
 - 006.jpg - Manual    f10 1/50s 28mm 160 ISO
 
-Then the photos 002-005 would be considered as one panorama. 
+Then the photos 003-005 would be considered as one panorama. 
 
 After executing the script you would have a new folder.
 
-`001-005` in your folder (the folder of this script). Hugin would create a `001-005.pto` file and at the end a
-`001-005.jpg` panorama.
+`003-005` in your folder (the folder of this script). Hugin would create a `003-005.pto` file and at the end a
+`003-005.jpg` panorama.
 
 Of course it isn't always the case that you only shot panoramas if you have the same settings. 
 That's the reason why the python script itself uses `opencv` to check whether a panorama is reasonable before the hugin script is called.
